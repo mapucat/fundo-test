@@ -1,4 +1,4 @@
-<button [attr.aria-pressed]="darkModeOn" clsass="primary-btn" (click)="toggleTheme()">
-  <app-icon name="moon" [isOutlined]="darkModeOn"></app-icon>
-  <span>{{ darkModeOn ? 'Light mode' : 'Dark mode' }}</span>
+<button [attr.aria-pressed]="darkModeOn" class="primary-btn" (click)="toggleTheme()">
+  <app-icon name="moon" [isOutlined]="!darkModeOn"></app-icon>
+  <span>{{ darkModeOn ? 'Light Mode' : 'Dark Mode' }}</span>
 </button>

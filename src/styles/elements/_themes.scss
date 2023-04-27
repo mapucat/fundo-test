@@ -1,5 +1,19 @@
 @mixin set-theme($theme) {
+  color: get-color($theme, 'font', 'primary');
   background-color: get-color($theme, 'background', 'primary');
+
+  header {
+    background-color: get-color($theme, 'background', 'secondary');
+    box-shadow: 0px 0px 5px get-color($theme, 'box-shadow', 'default');
+  }
+
+  .primary-btn {
+    background-color: get-color($theme, 'background', 'secondary');
+  }
+
+  * {
+    color: get-color($theme, 'font', 'primary');
+  }
 }
 
 body {
@@ -9,5 +23,9 @@ body {
 
   &.dark-mode {
     @include set-theme($dark-mode-colors);
+  }
+
+  * {
+    font-family: get-font-name('primary', 'regular');
   }
 }

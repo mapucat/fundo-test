@@ -7,9 +7,11 @@ $font-base: 16px;
 
 $fonts: (
     'primary': (
-        'light': 'NunitoSans-Regular',
-        'regular': 'NunitoSans-Bold',
-        'semibold': 'NunitoSans-SemiBold'
+        'light': 'NunitoSans-Light',
+        'regular': 'NunitoSans-Regular',
+        'semibold': 'NunitoSans-SemiBold',
+        'bold2': 'NunitoSans-Bold',
+        'extrabold': 'NunitoSans-ExtraBold',
     ),
     'callback': sans-serif
 ) !default;

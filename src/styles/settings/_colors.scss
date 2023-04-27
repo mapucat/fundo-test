@@ -7,7 +7,8 @@ $dark-blue-700: hsl(209, 23%, 22%);
 $dark-blue-800: hsl(207, 26%, 17%);
 $dark-blue-900: hsl(200, 15%, 8%);
 $dark-gray: hsl(0, 0%, 52%);
-$light-gray: hsl(0, 0%, 98%);
+$light-gray-800: hsl(0, 0%, 85%);
+$light-gray-900: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
 
 // Light Mode
@@ -21,8 +22,11 @@ $light-mode-colors: (
     'input': (
         'primary': $dark-blue-900
     ),
+    'box-shadow': (
+        'default': $light-gray-800
+    ),
     'background': (
-        'primary': $light-gray,
+        'primary': $light-gray-900,
         'secondary': $white
     )
 ) !default;
@@ -36,7 +40,10 @@ $dark-mode-colors: (
         'primary': $dark-blue-700
     ),
     'input': (
-        'primary': $light-gray
+        'primary': $light-gray-900
+    ),
+    'box-shadow': (
+        'default': $dark-blue-900
     ),
     'background': (
         'primary': $dark-blue-800,
