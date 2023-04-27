@@ -1,11 +1,13 @@
 @mixin set-theme($theme) {
-  body {
-    background-color: get-color($theme, 'background', 'primary');
-  }
+  background-color: get-color($theme, 'background', 'primary');
 }
 
-@include set-theme($light-mode-colors);
+body {
+  margin: 0;
+  min-height: 100vh;
+  @include set-theme($light-mode-colors);
 
-.dark-mode {
-  @include set-theme($dark-mode-colors);
+  &.dark-mode {
+    @include set-theme($dark-mode-colors);
+  }
 }

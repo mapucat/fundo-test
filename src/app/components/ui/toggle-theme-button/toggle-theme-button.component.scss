@@ -1,0 +1,19 @@
+@import '../../../../styles/index.scss';
+
+.primary-btn {
+  background-color: get-color($light-mode-colors, 'background', 'primary');
+}
+
+@mixin set-button($theme) {
+  .primary-btn {
+    background-color: get-color($theme, 'background', 'primary');
+  }
+}
+
+body {
+  @include set-button($light-mode-colors);
+
+  &.dark-mode {
+    @include set-button($dark-mode-colors);
+  }
+}
