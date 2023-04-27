@@ -1,0 +1,15 @@
+/*
+ * FONTS
+ */
+
+$font-small: 14px; 
+$font-base: 16px;
+
+$fonts: (
+    'primary': (
+        'light': 'NunitoSans-Regular',
+        'regular': 'NunitoSans-Bold',
+        'semibold': 'NunitoSans-SemiBold'
+    ),
+    'callback': sans-serif
+) !default;

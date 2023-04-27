@@ -1,0 +1,11 @@
+@mixin set-theme($theme) {
+  body {
+    background-color: get-color($theme, 'background', 'primary');
+  }
+}
+
+@include set-theme($light-mode-colors);
+
+.dark-mode {
+  @include set-theme($dark-mode-colors);
+}

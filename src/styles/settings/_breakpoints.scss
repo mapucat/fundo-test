@@ -1,0 +1,15 @@
+/*
+ * BREAKPOINTS
+ */
+ 
+$breakpoints: (
+    'small': 440px,
+    's-medium': 600px,
+    'medium': 840px,
+    'large': 960px,
+    'x-large': 1024px,
+    'xx-large': 1280px,
+    'xxx-large': 1440px,
+    'high-quality': 1700px,
+    'x-high-quality': 1920px,
+) !default;

@@ -1,0 +1,45 @@
+/*
+ * COLORS
+ */
+
+// tokens
+$dark-blue-700: hsl(209, 23%, 22%);
+$dark-blue-800: hsl(207, 26%, 17%);
+$dark-blue-900: hsl(200, 15%, 8%);
+$dark-gray: hsl(0, 0%, 52%);
+$light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+// Light Mode
+$light-mode-colors: (
+    'font': (
+      'primary': $dark-blue-900
+    ),
+    'button': (
+        'primary': $dark-blue-900
+    ),
+    'input': (
+        'primary': $dark-blue-900
+    ),
+    'background': (
+        'primary': $light-gray,
+        'secondary': $white
+    )
+) !default;
+
+// Dark Mode
+$dark-mode-colors: (
+    'font': (
+      'primary': $white
+    ),
+    'button': (
+        'primary': $dark-blue-700
+    ),
+    'input': (
+        'primary': $light-gray
+    ),
+    'background': (
+        'primary': $light-gray,
+        'secondary': $dark-blue-800
+    )
+) !default;

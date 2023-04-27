@@ -1,0 +1,3 @@
+@include set-font-face('../../assets/fonts/Nunito_Sans/', get-font-name('primary', 'light'), 300);
+@include set-font-face('../../assets/fonts/Nunito_Sans/', get-font-name('primary', 'regular'), 400);
+@include set-font-face('../../assets/fonts/Nunito_Sans/', get-font-name('primary', 'semibold'), 600);
