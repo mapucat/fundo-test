@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
       "root": "",
@@ -30,7 +30,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/icons/fontawesome/css/all.min.css",
               "src/styles/index.scss"
             ],
             "scripts": []
@@ -88,7 +87,7 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "sass",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
