@@ -1,0 +1,46 @@
+@import '../../../../styles/index.scss';
+
+.btn {
+  font-size: small;
+  border-radius: $border-radius;
+  cursor: pointer;
+  
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  &:hover {
+    filter: brightness(85%);
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+
+    app-icon {
+      font-size: medium;
+      padding-right: 6px;
+    }
+  }
+
+  // Variants
+  &--no-border {
+    border: none;
+  }
+
+  &--bold {
+    font-weight: 600;
+  }
+}
+
+
+@include set-breakpoint('x-small') {
+  .btn {
+    font-size: x-small;
+    app-icon {
+      font-size: small;
+    }
+  }
+}

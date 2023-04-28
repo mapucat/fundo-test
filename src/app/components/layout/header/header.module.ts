@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './header.component';
-import { ToggleThemeButtonModule } from '../../ui/toggle-theme-button/toggle-theme-button.module';
+import { IconModule } from '../../ui/icon/icon.module';
+import { ButtonModule } from '../../ui/button/button.module';
 
 
 
@@ -12,7 +13,8 @@ import { ToggleThemeButtonModule } from '../../ui/toggle-theme-button/toggle-the
   ],
   imports: [
     CommonModule,
-    ToggleThemeButtonModule
+    IconModule,
+    ButtonModule
   ],
   exports: [
     HeaderComponent

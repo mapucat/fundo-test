@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscription = this.countriesService.getCountries()
-      .subscribe((countries: Country[]) => this.countriesList = countries );
+      .subscribe((countries: Country[]) => this.countriesList = countries);
   }
 
   ngOnDestroy() {
