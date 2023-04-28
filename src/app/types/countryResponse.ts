@@ -27,4 +27,5 @@ export interface CountryResponse {
     [x: string]: string;
   },
   borders?: string[];
+  cca2: string;
 };

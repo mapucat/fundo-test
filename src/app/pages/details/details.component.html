@@ -1,0 +1,43 @@
+<section class="details-section">
+  <button class="btn--shadow-on" btn color="primary" [noBorder]="true"  (click)="goBack()">
+    <app-icon icon name="arrow-back" [isOutlined]="false"></app-icon>
+    Back
+  </button>
+
+  <div class="details-section__country country" *ngIf="country">
+    <img [src]="country.flag.url" [alt]="country.flag.alt">
+  
+    <div class="country__main-data">
+      <h2>{{ country.name }}</h2>
+      
+      <div class="country__properties">
+        <div>
+          <p><span class="text-bold">Native Name:</span> {{ country.nativeNames }}</p>
+          <p><span class="text-bold">Population:</span> {{ country.population | number: '1.0-0' }}</p>
+          <p><span class="text-bold">Region:</span> {{ country.region }}</p>
+          <p><span class="text-bold">Sub Region:</span> {{ country.subRegion }}</p>
+          <p><span class="text-bold">Capital:</span> {{ country.capital }}</p>
+        </div>
+        <div>
+          <p><span class="text-bold">Top Level Domain:</span> {{ country.tld }}</p>
+          <p><span class="text-bold">Currencies:</span> {{ country.currencies }}</p>
+          <p><span class="text-bold">Languages:</span> {{ country.languages }}</p>
+        </div>
+      </div>
+
+      <div class="country__borders">
+        <span class="text-bold">Border Countries:</span>
+        <div>
+          <a *ngFor="let borderCountry of country.borderCountries"
+            class="link--no-underline btn--shadow-on"
+            [attr.aria-description]="'Go to {{country.name}} details'"
+            [routerLink]="['/', country.cca2, 'details']" 
+            btn color="primary"
+            [noBorder]="true">
+            {{borderCountry}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

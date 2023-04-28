@@ -1,5 +1,7 @@
 <ul class="countries-list">
   <li *ngFor="let country of countriesList; index as i">
-    <app-country-card [country]="country"></app-country-card>
+    <a class="link--no-underline" [attr.aria-description]="'Go to {{country.name}} details'" [routerLink]="['/', country.cca2, 'details']">
+      <app-country-card [country]="country"></app-country-card>
+    </a>
   </li>
 </ul>

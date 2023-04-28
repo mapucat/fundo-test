@@ -7,8 +7,13 @@
     box-shadow: 0px 0px 5px get-color($theme, 'box-shadow', 'default');
   }
 
-  .btn--primary {
-    background-color: get-color($theme, 'background', 'secondary');
+  .btn {
+    &--primary {
+      background-color: get-color($theme, 'background', 'secondary');
+    }
+    &--shadow-on {
+      box-shadow: 0px 0px 5px get-color($theme, 'box-shadow', 'default');
+    }
   }
 
   * {
@@ -28,6 +33,14 @@ body {
 
   &.dark-mode {
     @include set-theme($dark-mode-colors);
+  }
+
+  main {
+    padding: 50px 5vw;
+  }
+
+  .link--no-underline {
+    text-decoration: none;
   }
 
   * {

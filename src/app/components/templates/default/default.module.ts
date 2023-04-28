@@ -6,6 +6,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { DefaultComponent } from './default.component';
 import { HeaderModule } from '../../layout/header/header.module';
 import { HomeModule } from '../../../pages/home/home.module';
+import { DetailsModule } from '../../../pages/details/details.module';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,8 @@ import { HomeModule } from '../../../pages/home/home.module';
     BrowserModule,
     RouterModule,
     HeaderModule,
-    HomeModule
+    HomeModule,
+    DetailsModule
   ],
   exports: [
     DefaultComponent

@@ -9,6 +9,7 @@ export interface CountryCard {
   population: number;
   region: string;
   capital: string;
+  cca2: string;
 }
 
 /**
@@ -29,6 +30,7 @@ export class Country implements CountryCard {
   currencies: string;
   languages: string;
   borderCountries: string[];
+  cca2: string;
 
   constructor(countryResponse: CountryResponse) {
     this.flag = {
@@ -45,5 +47,6 @@ export class Country implements CountryCard {
     this.currencies = countryResponse.currencies ? Object.values(countryResponse.currencies).map(({ name }) => name).join(', ') : 'None';
     this.languages = countryResponse.languages ? Object.values(countryResponse.languages).join(', ') : 'None';
     this.borderCountries = countryResponse.borders ? countryResponse.borders : [];
+    this.cca2 = countryResponse.cca2;
   }
 }

@@ -1,0 +1,75 @@
+@import '../../../styles/index.scss';
+
+.details-section {
+  display: flex;
+  flex-direction: column;
+
+  .btn {
+    width: 110px;
+  }
+
+  &__country {
+    padding-top: 60px;
+
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      width: 38vw;
+      height: 28vw;
+    }
+
+    & .country {
+      &__main-data {
+        padding-left: 100px;
+
+        h2 {
+          margin-top: 40px;
+          font-family: get-font-name('primary', 'extrabold');
+        }
+      }
+
+      &__properties {
+        height: 180px;
+        display: flex;
+      
+        div:first-child {
+          padding-right: 50px;
+        }
+
+        p {
+          margin: 0 0 5px 0;
+          font-size: small;
+        }
+
+        span.text-bold {
+          font-family: get-font-name('primary', 'bold2');
+        }
+      }
+
+      &__borders {
+        display: flex;
+
+        span.text-bold {
+          white-space: pre;
+          font-size: small;
+          font-family: get-font-name('primary', 'bold2');
+        }
+
+        div {
+          display: flex;
+          align-items: baseline;
+          flex-wrap: wrap;
+
+          a {
+            width: 70px;
+            height: 15px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+            font-size: x-small;
+          }
+        }
+      }
+    }
+  }
+}
