@@ -1,7 +1,24 @@
+@import '../../../styles/index.scss';
+
 ul.countries-list {
   list-style-type: none;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-left: 0;
+
+  @include set-breakpoint('small') {
+    justify-content: center;
+    li {
+      width: 70%;
+    }
+  }
+
+  @include set-breakpoint('x-small') {
+    justify-content: center;
+    li {
+      width: 80%;
+    }
+  }
 }

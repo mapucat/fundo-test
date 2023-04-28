@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription, take } from 'rxjs';
+import { Subscription, switchMap, take } from 'rxjs';
 
 import { CountriesService } from 'src/app/services/countries/countries.service';
-import { Country } from 'src/app/types/country';
+import { Country, BorderCountryDetail } from 'src/app/types/country';
 
 
 
@@ -17,6 +17,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription[] = [];
 
   country: Country | null = null;
+  borderCountriesDetails: BorderCountryDetail[] = []
 
   constructor(
     private router: Router,
@@ -26,9 +27,17 @@ export class DetailsComponent implements OnInit, OnDestroy {
 
   ngOnInit(){
     const subscription1$ = this.route.params.subscribe(params => {
-      const subscription2$ = this.countriesService.getCountry(params['id'])
-        .pipe(take(1))
-        .subscribe((country: Country) => { console.log(country); this.country = country});
+      const subscription2$ = this.countriesService.getCountryById(params['id'])
+        .pipe(
+          take(1),
+          switchMap((country: Country) => {
+            return this.countriesService.getBorderCountriesDetails(country)
+          })
+        )
+        .subscribe(({ country, borderCountriesDetails }) => {
+          this.country = country
+          this.borderCountriesDetails = borderCountriesDetails; 
+        });
       this.subscriptions.push(subscription2$);
     })
     this.subscriptions.push(subscription1$);

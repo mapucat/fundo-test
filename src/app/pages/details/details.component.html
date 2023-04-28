@@ -26,16 +26,17 @@
       </div>
 
       <div class="country__borders">
-        <span class="text-bold">Border Countries:</span>
+        <span class="text-bold">Border Countries: </span>
         <div>
-          <a *ngFor="let borderCountry of country.borderCountries"
+          <a *ngFor="let borderCountry of borderCountriesDetails"
             class="link--no-underline btn--shadow-on"
-            [attr.aria-description]="'Go to {{country.name}} details'"
-            [routerLink]="['/', country.cca2, 'details']" 
+            [attr.aria-description]="'Go to {{borderCountry.name}} details'"
+            [routerLink]="['/', borderCountry.cca2, 'details']" 
             btn color="primary"
             [noBorder]="true">
-            {{borderCountry}}
+            {{borderCountry.name}}
           </a>
+          <span *ngIf="borderCountriesDetails.length === 0">None</span>
         </div>
       </div>
     </div>

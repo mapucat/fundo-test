@@ -12,6 +12,11 @@ export interface CountryCard {
   cca2: string;
 }
 
+export interface BorderCountryDetail {
+  name: string;
+  cca2: string;
+}
+
 /**
  * Country abstraction
  */
