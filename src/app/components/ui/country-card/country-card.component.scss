@@ -1,0 +1,32 @@
+@import '../../../../styles/index.scss';
+
+article.country-card {
+  width: 200px;
+  border-radius: $border-radius;
+  margin-bottom: 50px;
+  
+  height: 280px;
+
+  img {
+    border-radius: $border-radius $border-radius 0 0;
+    width: 100%;
+    height: 50%;
+  }
+
+  div {
+    margin: 0 20px;
+    h2 {
+      margin: 12px 0px;
+      font-family: get-font-name('primary', 'extrabold');
+      font-size: smaller;
+    }
+  
+    p {
+      margin: 0 0 5px 0;
+      font-size: x-small;
+      .text-bold {
+        font-family: get-font-name('primary', 'bold2');
+      }
+    }
+  }
+}

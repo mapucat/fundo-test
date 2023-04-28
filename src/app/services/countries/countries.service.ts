@@ -22,7 +22,7 @@ export class CountriesService {
       .pipe(
         map((countries: CountryResponse[]) => { 
           this.countries = countries.map((country: CountryResponse) => new Country(country));
-          return this.countries.slice(0, 10); 
+          return this.countries.slice(0, 12); 
         })
       );
   }

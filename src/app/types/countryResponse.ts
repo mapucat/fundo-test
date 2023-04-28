@@ -3,7 +3,7 @@ export interface CountryResponse {
     alt: string;
     png: string;
   }
-  population: string;
+  population: number;
   region: string;
   subregion: string;
   capital?: string[];

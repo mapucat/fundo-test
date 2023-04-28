@@ -6,7 +6,7 @@ export interface CountryCard {
     url: string;
   };
   name: string;
-  population: string;
+  population: number;
   region: string;
   capital: string;
 }
@@ -21,7 +21,7 @@ export class Country implements CountryCard {
   };
   name: string;
   nativeNames: string;
-  population: string;
+  population: number;
   region: string;
   subRegion: string;
   capital: string;

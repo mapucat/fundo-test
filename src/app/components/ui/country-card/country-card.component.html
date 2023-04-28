@@ -1,3 +1,11 @@
-<div *ngIf="country">
-  {{ country.name }}
-</div>
+<article class="country-card" *ngIf="country">
+  <img [src]="country.flag.url" [alt]="country.flag.alt">
+  
+  <div>
+    <h2>{{ country.name }}</h2>
+    
+    <p><span class="text-bold">Population:</span> {{ country.population | number: '1.0-0' }}</p>
+    <p><span class="text-bold">Region:</span> {{ country.region }}</p>
+    <p><span class="text-bold">Capital:</span> {{ country.capital }}</p>
+  </div>
+</article>

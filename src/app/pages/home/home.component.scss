@@ -1,0 +1,8 @@
+ul.countries-list {
+  list-style-type: none;
+  padding: 80px 5vw;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
